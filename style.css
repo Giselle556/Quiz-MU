@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: rgb(10, 10, 8);
+    font-family: 'Nosifer';
 }
 
 .header {
@@ -9,12 +13,29 @@
     display: inline-flex;
     align-items: center;
     list-style-type: none;
+    font-size: 35px;
+    
     
 }
 
+
 h1 {
-    display: flex;
     justify-content: center;
     font-weight: bold;
+    color: rgb(224, 77, 57);
+    text-align: center;
+    display: block;
+    font-size: 60px;
     
+}
+
+.container {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
 }
