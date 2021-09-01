@@ -6,6 +6,7 @@
     padding: 0;
     background-color: rgb(224, 184, 230);
     font-family: 'boogaloo';
+    font-size: 25px;
     
 }
 
@@ -54,6 +55,10 @@ h1 {
     padding: 1rem;
 }
 
+#questions {
+    font-size: 10px;
+}
+
 #answers {
     margin-top: 30px;
     display: flex;
@@ -67,7 +72,7 @@ h1 {
     width: auto;
     justify-content: center;
 }
-.btn {
+#btn0, #btn1, #btn2, #btn3 {
     background-color: #e4ade9;
     width: 250px;
     font-size: 20px;
@@ -77,4 +82,12 @@ h1 {
     padding: 10px 10px;  
     flex: 0 1 250px;
    
+}
+
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+    cursor: pointer
+}
+
+#count {
+    font-size: 25px;
 }

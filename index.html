@@ -18,23 +18,28 @@
         </ul>
         </nav>
     </header>
-
-
-</body>
-    <div class="container">
+    <div class="subheader">
         <h1>Are you sure you want to take this quiz? I mean go ahead if this is really what you want to spend your time on.....</h1>
-        <div id="question-cont" class="hide">
-        <div id="questions">Question</div>
-        <div id="answers">
-            <button class="btn">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <button class="btn">4</button>
+        <h2 class="time" style="text-align: center;"></h2>
+
+    </div>
+    <div class="container">
+        <div id="question-cont" class="hide"></div>
+            <p id="question"></p>
+        <div id="answers"class="btnflex">
+            <button id="btn0"><span id="choice0"></span></button>
+            <button id="btn1"><span id="choice1"></span></button>
+            <button id="btn2"><span id="choice2"></span></button>
+            <button id="btn3"><span id="choice3"></span></button>
         </div>
     </div>
-
+    <footer>
+        <p id="count">Question x of y</p>
+    </footer>
 
     </div>
+<script src="script.js"></script>
+</body>
 
 
 
