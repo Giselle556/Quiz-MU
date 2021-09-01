@@ -10,6 +10,7 @@ This is a timed quiz based on music lyrics and memes. But BEWARE when you chose 
 -Javascript
 
 # Images
+![image](https://user-images.githubusercontent.com/89003419/131615011-144f72c4-4b84-464f-9ba0-c25d64b005b7.png)
 
 
 # Contact
