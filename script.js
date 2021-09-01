@@ -1,6 +1,34 @@
+var timeEl = document.querySelector(".time");
+var SubEl = document.getElementById("subheader");
+
+var secondsLeft = 25;
+
+var secondsLeft = 25;
+
+function setTime() {
+  // Sets interval in variable
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timeEl.textContent = secondsLeft + " seconds left!!! HURRY IT UP!";
+
+    if(secondsLeft === 0) {
+      // Stops execution of action at set interval
+      clearInterval(timerInterval);
+      // Calls function to create and append image
+      sendMessage();
+    }
+
+  }, 1000);
+}
 
 
-
+function sendMessage() {
+    timeEl.textContent = " ";
+    
+  
+  }
+  
+  setTime();
 
 
 function Quiz(questions) {
@@ -42,11 +70,11 @@ function populate() {
         showScores();
     }
     else {
-        // show question
-        var element = document.getElementById("question");
+        
+        var element = document.getElementById("question-cont");
         element.innerHTML = quiz.getQuestionIndex().text;
  
-        // show options
+       
         var choices = quiz.getQuestionIndex().choices;
         for(var i = 0; i < choices.length; i++) {
             var element = document.getElementById("choice" + i);
@@ -69,18 +97,18 @@ function guess(id, guess) {
  
 function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
-    var element = document.getElementById("progress");
+    var element = document.getElementById("count");
     element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
 };
  
+//Need to fix the end results to get them to properly populate
 function showScores() {
     var gameOverHTML = "<h1>Result</h1>";
-    gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+    gameOverHTML += "<h3 id='score'> Your scores: " + quiz.score + "</h3>";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 };
  
-// create questions here
 var questions = [
     new Question("Do you know the muffin man?", ["the coyote?", "Shrek?","Fiona?", "Yes, I know the Muffin Man. W-who lives on Drury Lane?"], "Yes, I know the Muffin Man. W-who lives on Drury Lane?"),
     new Question("Bella, where have you been....?", ["Girl", "Lady", "Loca", "Loser"], "Loca"),
@@ -89,8 +117,8 @@ var questions = [
     new Question("Who is the daughter of Will Smith?", ["Jayden", "wilma", "Willow", "Jessica"], "Willow")
 ];
  
-// create quiz
+
 var quiz = new Quiz(questions);
  
-// display quiz
+
 populate();
